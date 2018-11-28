@@ -12,9 +12,14 @@ enum ButtonType: String {
     case apple, yahoo, google
 }
 
-class ButtonView: UIView {
+class ButtonView: UIView, NibLoadable {
 
     var onTap: (() -> Void)?
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        widthAnchor.constraint(equalToConstant: 200).isActive = true
+    }
 
     @IBAction func buttonTap() {
         onTap?()

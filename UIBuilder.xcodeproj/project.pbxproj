@@ -14,6 +14,13 @@
 		6885B8B821AF4E9D00E302BA /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8B721AF4E9D00E302BA /* ButtonView.swift */; };
 		6885B8BA21AF4FBD00E302BA /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8B921AF4FBD00E302BA /* AbstractFactory.swift */; };
 		6885B8BC21AF4FFA00E302BA /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8BB21AF4FFA00E302BA /* ButtonBuilder.swift */; };
+		6885B8BF21AF515C00E302BA /* AppleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8BE21AF515C00E302BA /* AppleFactory.swift */; };
+		6885B8C121AF518800E302BA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8C021AF518800E302BA /* NibLoadable.swift */; };
+		6885B8C421AF535B00E302BA /* AppleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6885B8C321AF535B00E302BA /* AppleButton.xib */; };
+		6885B8C921AF573100E302BA /* GoogleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8C521AF573000E302BA /* GoogleFactory.swift */; };
+		6885B8CA21AF573100E302BA /* GoogleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6885B8C621AF573000E302BA /* GoogleButton.xib */; };
+		6885B8CB21AF573100E302BA /* YahooButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6885B8C721AF573000E302BA /* YahooButton.xib */; };
+		6885B8CC21AF573100E302BA /* YahooFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885B8C821AF573000E302BA /* YahooFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		6885B8B721AF4E9D00E302BA /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		6885B8B921AF4FBD00E302BA /* AbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
 		6885B8BB21AF4FFA00E302BA /* ButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
+		6885B8BE21AF515C00E302BA /* AppleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFactory.swift; sourceTree = "<group>"; };
+		6885B8C021AF518800E302BA /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		6885B8C321AF535B00E302BA /* AppleButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleButton.xib; sourceTree = "<group>"; };
+		6885B8C521AF573000E302BA /* GoogleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleFactory.swift; sourceTree = "<group>"; };
+		6885B8C621AF573000E302BA /* GoogleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoogleButton.xib; sourceTree = "<group>"; };
+		6885B8C721AF573000E302BA /* YahooButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YahooButton.xib; sourceTree = "<group>"; };
+		6885B8C821AF573000E302BA /* YahooFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +73,30 @@
 			isa = PBXGroup;
 			children = (
 				6885B8A521AF4A3900E302BA /* AppDelegate.swift */,
-				6885B8B921AF4FBD00E302BA /* AbstractFactory.swift */,
+				6885B8BD21AF514800E302BA /* factories */,
 				6885B8BB21AF4FFA00E302BA /* ButtonBuilder.swift */,
 				6885B8B721AF4E9D00E302BA /* ButtonView.swift */,
 				6885B8A721AF4A3900E302BA /* ViewController.swift */,
+				6885B8C021AF518800E302BA /* NibLoadable.swift */,
 				6885B8AC21AF4A3B00E302BA /* Assets.xcassets */,
 				6885B8AE21AF4A3B00E302BA /* LaunchScreen.storyboard */,
 				6885B8B121AF4A3B00E302BA /* Info.plist */,
 			);
 			path = UIBuilder;
+			sourceTree = "<group>";
+		};
+		6885B8BD21AF514800E302BA /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				6885B8B921AF4FBD00E302BA /* AbstractFactory.swift */,
+				6885B8C321AF535B00E302BA /* AppleButton.xib */,
+				6885B8BE21AF515C00E302BA /* AppleFactory.swift */,
+				6885B8C621AF573000E302BA /* GoogleButton.xib */,
+				6885B8C521AF573000E302BA /* GoogleFactory.swift */,
+				6885B8C721AF573000E302BA /* YahooButton.xib */,
+				6885B8C821AF573000E302BA /* YahooFactory.swift */,
+			);
+			path = factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +157,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6885B8C421AF535B00E302BA /* AppleButton.xib in Resources */,
 				6885B8B021AF4A3B00E302BA /* LaunchScreen.storyboard in Resources */,
+				6885B8CB21AF573100E302BA /* YahooButton.xib in Resources */,
+				6885B8CA21AF573100E302BA /* GoogleButton.xib in Resources */,
 				6885B8AD21AF4A3B00E302BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,8 +175,12 @@
 				6885B8BA21AF4FBD00E302BA /* AbstractFactory.swift in Sources */,
 				6885B8A821AF4A3900E302BA /* ViewController.swift in Sources */,
 				6885B8BC21AF4FFA00E302BA /* ButtonBuilder.swift in Sources */,
+				6885B8C921AF573100E302BA /* GoogleFactory.swift in Sources */,
+				6885B8CC21AF573100E302BA /* YahooFactory.swift in Sources */,
+				6885B8BF21AF515C00E302BA /* AppleFactory.swift in Sources */,
 				6885B8A621AF4A3900E302BA /* AppDelegate.swift in Sources */,
 				6885B8B821AF4E9D00E302BA /* ButtonView.swift in Sources */,
+				6885B8C121AF518800E302BA /* NibLoadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
