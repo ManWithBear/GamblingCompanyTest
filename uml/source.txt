@@ -1,0 +1,28 @@
+@startuml
+'
+' Declaration
+'
+interface AbstractFactory {
+    makeButton(): ButtonView
+}
+class AppleFactory 
+class GoogleFactory
+class YahooFactory
+
+interface ButtonBuilder {
+    buildTypeOnTap(): UIView
+}
+class DefaultButtonBuilder
+
+'
+' Map
+'
+AbstractFactory <|.. AppleFactory 
+AbstractFactory <|.. GoogleFactory
+AbstractFactory <|.. YahooFactory
+
+ButtonBuilder <|.. DefaultButtonBuilder
+
+DefaultButtonBuilder *-right- AbstractFactory : configuration
+
+@enduml
